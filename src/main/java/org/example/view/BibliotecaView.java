@@ -11,8 +11,8 @@ public class BibliotecaView {
         System.out.println("2 - Cadastrar emprestimo");
         System.out.println("3 - Devolver livro");
         System.out.println("4 - Consultar livros");
-        capturarOpcao();
 
+        System.out.println("0 - Sair");
 
     }
 
@@ -21,5 +21,9 @@ public class BibliotecaView {
 
         return opcao;
     }
+
+
+
+
 
 }

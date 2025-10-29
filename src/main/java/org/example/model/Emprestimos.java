@@ -26,6 +26,15 @@ public class Emprestimos {
         this.data_devolucao = data_devolucao;
     }
 
+    public Emprestimos(int idLivro, int idUsuario, Date dataDevolucao) {
+        this.livro_id = idLivro;
+        this.id_usuario = idUsuario;
+        this.data_devolucao = dataDevolucao;
+    }
+
+    public Emprestimos(int id, java.sql.Date dataEmprestimo, java.sql.Date dataDevolucao) {
+    }
+
     public int getId() {
         return id;
     }
@@ -64,5 +73,16 @@ public class Emprestimos {
 
     public void setData_devolucao(Date data_devolucao) {
         this.data_devolucao = data_devolucao;
+    }
+
+    @Override
+    public String toString() {
+        return "Emprestimos{" +
+                "id=" + id +
+                ", livro_id=" + livro_id +
+                ", id_usuario=" + id_usuario +
+                ", data_emprestimo=" + data_emprestimo +
+                ", data_devolucao=" + data_devolucao +
+                '}';
     }
 }

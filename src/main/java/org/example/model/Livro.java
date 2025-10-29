@@ -1,21 +1,31 @@
 package org.example.model;
 
+import java.sql.Date;
+
 public class Livro {
 
     private int id;
     private String titulo;
     private String autor;
-    private String ano;
+    private int ano;
     private boolean disponivel;
 
 
-    public Livro(int id, String titulo, String autor, String ano, boolean disponivel) {
+    public Livro(int id, String titulo, String autor, int ano, boolean disponivel) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
         this.disponivel = disponivel;
     }
+
+    public Livro(String titulo, String autor, int ano) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ano = ano;
+    }
+
+
 
     public int getId() {
         return id;
@@ -41,11 +51,11 @@ public class Livro {
         this.autor = autor;
     }
 
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
