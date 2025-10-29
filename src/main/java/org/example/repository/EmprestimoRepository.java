@@ -28,7 +28,7 @@ public class EmprestimoRepository {
     }
 
 
-    public void devolverLivros(Date data, int id) throws SQLException {
+    public static void devolverLivros(Date data, int id) throws SQLException {
         String query = "UPDATE emprestimos SET data_devolucao = ? WHERE id = ?";
 
         try (Connection connection = Conexao.conectar();
@@ -48,7 +48,7 @@ public class EmprestimoRepository {
     }
 
 
-    public List<Emprestimos> listarEmprestimos() throws SQLException {
+    public static List<Emprestimos> listarEmprestimos() throws SQLException {
 
         String query = "SELECT id,data_emprestimo,data_devolucao FROM emprestimos";
 
@@ -71,7 +71,7 @@ public class EmprestimoRepository {
             }
 
         }
-//arrumar esse listar e continuar 3
+
         return emprestimos;
     }
 

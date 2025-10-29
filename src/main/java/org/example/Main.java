@@ -38,7 +38,7 @@ public class Main {
                 break;
             }
             case 3: {
-                // devolverLivro();
+                realizarDevolucao();
                 break;
             }
             case 4: {

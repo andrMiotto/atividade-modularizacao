@@ -33,6 +33,17 @@ public class Emprestimos {
     }
 
     public Emprestimos(int id, java.sql.Date dataEmprestimo, java.sql.Date dataDevolucao) {
+        this.id = id;
+        this.data_emprestimo = dataEmprestimo;
+        this.data_devolucao = dataDevolucao;
+
+
+    }
+
+    public Emprestimos(int idSelecionado, java.sql.Date data) {
+
+        this.id = idSelecionado;
+        this.data_devolucao = data;
     }
 
     public int getId() {
