@@ -46,6 +46,15 @@ public class Emprestimos {
         this.data_devolucao = data;
     }
 
+    public Emprestimos(int id, java.sql.Date dataEmprestimo, java.sql.Date dataDevolucao, int livro_id) {
+        this.id = id;
+        this.data_emprestimo = dataEmprestimo;
+        this.data_devolucao = dataDevolucao;
+        this.livro_id = livro_id;
+
+
+    }
+
     public int getId() {
         return id;
     }

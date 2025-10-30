@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import static org.example.service.LivroService.*;
 import static org.example.service.EmprestimoService.*;
+import static org.example.view.BibliotecaView.listarBiblioteca;
 
 
 public class Main {
@@ -42,7 +43,7 @@ public class Main {
                 break;
             }
             case 4: {
-                //consultarLivros();
+                listarBiblioteca();
                 break;
             }
 

@@ -48,14 +48,19 @@ public class EmprestimoService {
         int idSelecionado = sc.nextInt();
         sc.nextLine();
 
-        System.out.println("Digite a data de devolucao");
+        int idLivroParaAtualizar = -1;
+        for (Emprestimos e : listaEmprestimos) {
+            if (e.getId() == idSelecionado) {
+                idLivroParaAtualizar = e.getIdLivro();
+                break; // Achamos, podemos parar o loop
+            }
+        }
+
+        System.out.println("Digite a data de devolucao(yyyy-MM-dd)");
         Date data = Date.valueOf(sc.nextLine());
 
-
-
-        var emprestimo = new Emprestimos(idSelecionado, data);
-
-        EmprestimoRepository.devolverLivros(emprestimo);
+        EmprestimoRepository.devolverLivros(data, idSelecionado);
+      //  LivroRepository.atualizarStatus(livro);
 
 
     }

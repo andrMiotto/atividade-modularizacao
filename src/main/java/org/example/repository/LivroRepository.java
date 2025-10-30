@@ -59,7 +59,7 @@ public class LivroRepository {
         return livros;
     }
 
-    public void atualizarStatus (int id)throws SQLException{
+    public static void atualizarStatus (int id)throws SQLException{
         String query="UPDATE livro SET disponivel = TRUE where ID = ?";
 
         try(Connection connection = Conexao.conectar();

@@ -40,8 +40,6 @@ public class EmprestimoRepository {
 
             stmt.executeUpdate();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
 
 
@@ -50,7 +48,7 @@ public class EmprestimoRepository {
 
     public static List<Emprestimos> listarEmprestimos() throws SQLException {
 
-        String query = "SELECT id,data_emprestimo,data_devolucao FROM emprestimos";
+        String query = "SELECT id, data_emprestimo, data_devolucao, livro_id FROM emprestimos";
 
         List<Emprestimos> emprestimos = new ArrayList<>();
 
@@ -65,9 +63,10 @@ public class EmprestimoRepository {
                 Date data_emprestimo = rs.getDate("data_emprestimo");
                 Date data_devolucao = rs.getDate("data_devolucao");
 
-                var emprestimo = new Emprestimos(id, data_emprestimo, data_devolucao);
-                emprestimos.add(emprestimo);
+                int livro_id = rs.getInt("id_livro");
 
+                var emprestimo = new Emprestimos(id, data_emprestimo, data_devolucao, livro_id);
+                emprestimos.add(emprestimo);
             }
 
         }
