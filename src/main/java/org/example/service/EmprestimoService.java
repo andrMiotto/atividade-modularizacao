@@ -51,8 +51,8 @@ public class EmprestimoService {
         int idLivroParaAtualizar = -1;
         for (Emprestimos e : listaEmprestimos) {
             if (e.getId() == idSelecionado) {
-                idLivroParaAtualizar = e.getIdLivro();
-                break; // Achamos, podemos parar o loop
+                idLivroParaAtualizar = e.getLivro_id();
+                break;
             }
         }
 
@@ -60,7 +60,7 @@ public class EmprestimoService {
         Date data = Date.valueOf(sc.nextLine());
 
         EmprestimoRepository.devolverLivros(data, idSelecionado);
-      //  LivroRepository.atualizarStatus(livro);
+        LivroRepository.atualizarStatus(idLivroParaAtualizar);
 
 
     }

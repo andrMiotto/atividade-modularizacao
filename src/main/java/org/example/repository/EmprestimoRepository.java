@@ -63,7 +63,7 @@ public class EmprestimoRepository {
                 Date data_emprestimo = rs.getDate("data_emprestimo");
                 Date data_devolucao = rs.getDate("data_devolucao");
 
-                int livro_id = rs.getInt("id_livro");
+                int livro_id = rs.getInt("livro_id");
 
                 var emprestimo = new Emprestimos(id, data_emprestimo, data_devolucao, livro_id);
                 emprestimos.add(emprestimo);
